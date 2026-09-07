@@ -1,0 +1,2295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diem Hub Limited — Drinks, Events & Lifestyle | Ibadan</title>
+  <meta name="description" content="Diem Hub Limited in Elebu, Ibadan. Signature Fruity Zobo, Tigernut Milky, event bar booking, footwear store, smoothie & juice bar, and hair salon." />
+  <meta property="og:title" content="Diem Hub Limited — Drinks, Events & Lifestyle" />
+  <meta property="og:description" content="Vibrant drinks, event bar services, footwear, fresh juices, and hair salon in Premiere Estate, Akuru, Elebu, Ibadan." />
+  <meta property="og:type" content="website" />
+
+  <!-- Typography: Google Fonts Bricolage Grotesque & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800;12..96,900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    /* =========================================================
+       CSS RESET & DESIGN TOKENS
+       ========================================================= */
+    :root {
+      --bg-cream: #FBF9F4;
+      --bg-surface: #FFFFFF;
+      --bg-warm-tint: #FFF4EE;
+      --bg-mint-tint: #EEFAF5;
+      --bg-gold-tint: #FEF8E7;
+      
+      --accent-coral: #FF385C;
+      --accent-coral-hover: #E32649;
+      --accent-coral-deep: #A31230;
+      --accent-coral-soft: #FFE5EB;
+      
+      --accent-mango: #FFAE03;
+      --accent-mango-dark: #C67800;
+      --accent-mint: #06D6A0;
+      --accent-mint-dark: #059669;
+      --accent-electric-purple: #7928CA;
+      
+      --text-ink: #19121E;
+      --text-muted: #5C5261;
+      --text-subtle: #897E8F;
+      
+      --border-subtle: #EBE4D8;
+      --border-card: #E4DACB;
+      --border-accent: rgba(255, 56, 92, 0.25);
+      
+      --font-display: 'Bricolage Grotesque', system-ui, -apple-system, sans-serif;
+      --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      
+      --shadow-sm: 0 2px 4px rgba(25, 18, 30, 0.04);
+      --shadow-md: 0 8px 24px rgba(25, 18, 30, 0.07);
+      --shadow-lg: 0 16px 36px rgba(25, 18, 30, 0.1);
+      --shadow-pop: 0 12px 28px rgba(255, 56, 92, 0.22);
+      
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+      --radius-pill: 9999px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background-color: var(--bg-cream);
+      color: var(--text-ink);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    body {
+      overflow-x: hidden;
+      min-height: 100vh;
+      background-color: var(--bg-cream);
+    }
+
+    /* Selection */
+    ::selection {
+      background: var(--accent-coral-soft);
+      color: var(--accent-coral-deep);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+    }
+
+    /* Layout Containers */
+    .container {
+      width: 100%;
+      max-width: 1160px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    /* =========================================================
+       TYPOGRAPHY
+       ========================================================= */
+    h1, h2, h3, h4, .font-display {
+      font-family: var(--font-display);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--text-ink);
+    }
+
+    h1 {
+      font-size: clamp(2.3rem, 7vw, 4.4rem);
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -0.035em;
+    }
+
+    h2 {
+      font-size: clamp(1.85rem, 5vw, 2.75rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+    }
+
+    h3 {
+      font-size: clamp(1.25rem, 3vw, 1.55rem);
+      font-weight: 700;
+    }
+
+    p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.65;
+    }
+
+    /* =========================================================
+       BUTTONS & BADGES
+       ========================================================= */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.02rem;
+      padding: 14px 28px;
+      border-radius: var(--radius-pill);
+      white-space: nowrap;
+      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+      text-align: center;
+    }
+
+    .btn-primary {
+      background-color: var(--accent-coral);
+      color: #FFFFFF;
+      box-shadow: var(--shadow-pop);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent-coral-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 16px 32px rgba(255, 56, 92, 0.32);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+
+    .btn-outline {
+      background-color: #FFFFFF;
+      color: var(--text-ink);
+      border: 2px solid var(--border-card);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--text-ink);
+      background-color: var(--bg-cream);
+      transform: translateY(-2px);
+    }
+
+    .btn-sm {
+      padding: 10px 20px;
+      font-size: 0.92rem;
+    }
+
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .badge-coral {
+      background: var(--accent-coral-soft);
+      color: var(--accent-coral-deep);
+    }
+
+    .badge-mango {
+      background: var(--bg-gold-tint);
+      color: var(--accent-mango-dark);
+      border: 1px solid rgba(255, 174, 3, 0.3);
+    }
+
+    .badge-mint {
+      background: var(--bg-mint-tint);
+      color: var(--accent-mint-dark);
+      border: 1px solid rgba(6, 214, 160, 0.3);
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background-color: var(--accent-mint);
+      border-radius: 50%;
+      box-shadow: 0 0 0 0 rgba(6, 214, 160, 0.7);
+      animation: pulse-ring 1.8s infinite;
+    }
+
+    @keyframes pulse-ring {
+      0% {
+        box-shadow: 0 0 0 0 rgba(6, 214, 160, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 8px rgba(6, 214, 160, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(6, 214, 160, 0);
+      }
+    }
+
+    /* =========================================================
+       HEADER / NAVBAR
+       ========================================================= */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 90;
+      background-color: rgba(251, 249, 244, 0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-subtle);
+      transition: all 0.2s ease;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 1.35rem;
+      letter-spacing: -0.03em;
+      color: var(--text-ink);
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent-coral) 0%, var(--accent-mango) 100%);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 1.25rem;
+      box-shadow: 0 4px 12px rgba(255, 56, 92, 0.3);
+    }
+
+    .header-location-tag {
+      display: none;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: var(--bg-surface);
+      padding: 6px 12px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .header-nav {
+      display: none;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .header-nav a {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      transition: color 0.15s ease;
+    }
+
+    .header-nav a:hover {
+      color: var(--accent-coral);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* =========================================================
+       HERO SECTION
+       ========================================================= */
+    .hero-section {
+      padding-top: 36px;
+      padding-bottom: 56px;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .hero-announcement {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-card);
+      padding: 8px 16px;
+      border-radius: var(--radius-pill);
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-ink);
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 20px;
+    }
+
+    .hero-title {
+      margin-bottom: 18px;
+    }
+
+    .hero-title .highlight {
+      color: var(--accent-coral);
+      position: relative;
+      display: inline-block;
+    }
+
+    .hero-title .highlight::after {
+      content: '';
+      position: absolute;
+      bottom: 4px;
+      left: 0;
+      width: 100%;
+      height: 10px;
+      background: rgba(255, 174, 3, 0.28);
+      z-index: -1;
+      border-radius: 4px;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+      line-height: 1.55;
+      color: var(--text-muted);
+      margin-bottom: 30px;
+      max-width: 580px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 36px;
+    }
+
+    .hub-offerings-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .offering-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border-radius: var(--radius-md);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-card);
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: var(--text-ink);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .offering-chip span.emoji {
+      font-size: 1.1rem;
+    }
+
+    /* Hero Visual Card (Pitch Showcase Board) */
+    .hero-visual-card {
+      background: var(--bg-surface);
+      border: 2px solid var(--border-card);
+      border-radius: var(--radius-xl);
+      padding: 24px;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+      background-image: radial-gradient(#F0E7D9 1px, transparent 1px);
+      background-size: 18px 18px;
+    }
+
+    .hero-visual-card::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 240px;
+      height: 240px;
+      background: radial-gradient(circle, rgba(255, 56, 92, 0.18) 0%, rgba(255, 174, 3, 0.08) 70%, transparent 100%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-visual-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .hero-badge-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .hero-status-pill {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--accent-mint-dark);
+      background: var(--bg-mint-tint);
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      width: fit-content;
+    }
+
+    .hero-location-text {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    /* Showcase Drinks Preview in Hero Card */
+    .hero-drinks-mini-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .hero-mini-drink {
+      background: var(--bg-cream);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      text-align: center;
+      position: relative;
+      transition: transform 0.2s ease;
+    }
+
+    .hero-mini-drink:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent-coral);
+    }
+
+    .mini-drink-art-container {
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+
+    .hero-mini-drink h4 {
+      font-size: 0.98rem;
+      margin-bottom: 2px;
+    }
+
+    .hero-mini-drink p {
+      font-size: 0.8rem;
+      color: var(--accent-coral);
+      font-weight: 700;
+    }
+
+    .hero-social-proof {
+      background: var(--bg-warm-tint);
+      border: 1px solid rgba(255, 56, 92, 0.2);
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .social-proof-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--accent-coral);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .social-proof-text {
+      font-size: 0.86rem;
+      color: var(--text-ink);
+      line-height: 1.35;
+    }
+
+    .social-proof-text strong {
+      color: var(--accent-coral-deep);
+    }
+
+    /* =========================================================
+       SECTION: SIGNATURE DRINKS
+       ========================================================= */
+    .section-wrap {
+      padding: 64px 0;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 44px;
+    }
+
+    .section-header .badge-pill {
+      margin-bottom: 14px;
+    }
+
+    .section-header h2 {
+      margin-bottom: 14px;
+    }
+
+    .section-header p {
+      font-size: 1.1rem;
+    }
+
+    .drinks-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .drink-card {
+      background: var(--bg-surface);
+      border: 2px solid var(--border-card);
+      border-radius: var(--radius-xl);
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .drink-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--accent-coral);
+    }
+
+    .drink-card-popular {
+      border-color: var(--accent-coral);
+    }
+
+    .card-top-tag {
+      position: absolute;
+      top: 16px;
+      right: 18px;
+    }
+
+    /* CSS Drink Illustrations (No broken images) */
+    .drink-visual-box {
+      width: 100%;
+      height: 170px;
+      background: var(--bg-cream);
+      border-radius: var(--radius-lg);
+      margin-bottom: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--border-subtle);
+    }
+
+    /* --- ART 1: FRUITY ZOBO GLASS --- */
+    .glass-zobo {
+      width: 72px;
+      height: 120px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.15) 100%);
+      border: 3px solid #E2D7CE;
+      border-top: none;
+      border-radius: 4px 4px 22px 22px;
+      position: relative;
+      box-shadow: inset 0 -12px 18px rgba(0,0,0,0.12), 0 8px 16px rgba(163, 18, 48, 0.15);
+      overflow: hidden;
+    }
+
+    .drink-liquid-zobo {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 84%;
+      background: linear-gradient(180deg, #FF1352 0%, #A40028 100%);
+      border-radius: 0 0 18px 18px;
+    }
+
+    .ice-cube {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      background: rgba(255, 255, 255, 0.45);
+      border: 1.5px solid rgba(255, 255, 255, 0.7);
+      border-radius: 4px;
+      transform: rotate(20deg);
+    }
+
+    .ice-1 { top: 12px; left: 14px; }
+    .ice-2 { top: 32px; right: 12px; transform: rotate(-15deg); }
+
+    .mint-leaf {
+      position: absolute;
+      top: -14px;
+      right: 6px;
+      width: 22px;
+      height: 14px;
+      background: #10B981;
+      border-radius: 14px 0 14px 0;
+      transform: rotate(45deg);
+      border: 1px solid #047857;
+      z-index: 5;
+    }
+
+    .orange-slice {
+      position: absolute;
+      top: -10px;
+      left: 2px;
+      width: 26px;
+      height: 26px;
+      background: #FFAE03;
+      border-radius: 50%;
+      border: 3px solid #FFF3B0;
+      clip-path: polygon(0 0, 100% 0, 100% 60%, 0 60%);
+      transform: rotate(-25deg);
+      z-index: 6;
+    }
+
+    .straw-striped {
+      position: absolute;
+      top: -30px;
+      left: 28px;
+      width: 8px;
+      height: 140px;
+      background: repeating-linear-gradient(45deg, #FFFFFF, #FFFFFF 6px, #FF385C 6px, #FF385C 12px);
+      transform: rotate(12deg);
+      border-radius: 4px;
+      z-index: 4;
+      box-shadow: 2px 0 6px rgba(0,0,0,0.15);
+    }
+
+    /* --- ART 2: TIGERNUT MILKY JAR --- */
+    .glass-tigernut {
+      width: 78px;
+      height: 114px;
+      background: rgba(255, 255, 255, 0.5);
+      border: 3.5px solid #DED4C7;
+      border-top: none;
+      border-radius: 12px 12px 20px 20px;
+      position: relative;
+      box-shadow: inset 0 -10px 14px rgba(0,0,0,0.06), 0 8px 16px rgba(214, 158, 46, 0.15);
+      overflow: hidden;
+    }
+
+    .drink-liquid-tigernut {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 88%;
+      background: linear-gradient(180deg, #FFFDF8 0%, #F5E5C9 40%, #E8D3AE 100%);
+      border-radius: 0 0 16px 16px;
+    }
+
+    .foam-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 16px;
+      background: #FFFFFF;
+      border-bottom: 2px dashed #D6C29E;
+    }
+
+    .tigernut-dates-fleck {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: #7B341E;
+      border-radius: 50%;
+    }
+
+    .cinnamon-stick {
+      position: absolute;
+      top: -26px;
+      right: 20px;
+      width: 9px;
+      height: 120px;
+      background: linear-gradient(90deg, #6B3419, #8C4722, #552711);
+      transform: rotate(-14deg);
+      border-radius: 3px;
+      z-index: 4;
+    }
+
+    /* --- ART 3: SUNSET CHAPMAN TALL --- */
+    .glass-chapman {
+      width: 66px;
+      height: 126px;
+      border: 3px solid #E2D7CE;
+      border-top: none;
+      border-radius: 2px 2px 18px 18px;
+      position: relative;
+      box-shadow: inset 0 -10px 15px rgba(0,0,0,0.08), 0 8px 16px rgba(255, 56, 92, 0.15);
+      overflow: hidden;
+    }
+
+    .drink-liquid-chapman {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 90%;
+      background: linear-gradient(180deg, #FFAE03 0%, #FF4D2D 45%, #B30026 100%);
+      border-radius: 0 0 14px 14px;
+    }
+
+    .cucumber-ribbon {
+      position: absolute;
+      bottom: 16px;
+      left: 6px;
+      width: 50px;
+      height: 10px;
+      background: rgba(16, 185, 129, 0.7);
+      border: 1px solid #059669;
+      border-radius: 10px;
+      transform: rotate(35deg);
+    }
+
+    /* --- ART 4: TROPICAL SHAKE / BOOSTER --- */
+    .glass-shake {
+      width: 74px;
+      height: 122px;
+      border: 3px solid #E2D7CE;
+      border-top: none;
+      border-radius: 8px 8px 24px 24px;
+      position: relative;
+      box-shadow: inset 0 -10px 15px rgba(0,0,0,0.08), 0 8px 16px rgba(6, 214, 160, 0.15);
+      overflow: hidden;
+    }
+
+    .drink-liquid-shake {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 92%;
+      background: linear-gradient(180deg, #FFE873 0%, #FFB703 50%, #FB8500 100%);
+      border-radius: 0 0 20px 20px;
+    }
+
+    .whipped-cream {
+      position: absolute;
+      top: -14px;
+      left: 10px;
+      width: 52px;
+      height: 24px;
+      background: #FFFFFF;
+      border-radius: 50% 50% 10% 10%;
+      border: 2px solid #F0E8DD;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+      z-index: 5;
+    }
+
+    .drink-card-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .drink-title {
+      font-size: 1.35rem;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .drink-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .drink-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 14px;
+      border-top: 1px dashed var(--border-card);
+    }
+
+    .drink-category {
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--text-subtle);
+      letter-spacing: 0.05em;
+    }
+
+    .drink-order-link {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--accent-coral);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap 0.15s ease;
+    }
+
+    .drink-order-link:hover {
+      color: var(--accent-coral-hover);
+      gap: 9px;
+    }
+
+    /* =========================================================
+       SECTION: SERVICES (4 PILLARS)
+       ========================================================= */
+    .services-nav-tabs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 36px;
+    }
+
+    .service-tab-btn {
+      padding: 10px 20px;
+      border-radius: var(--radius-pill);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.92rem;
+      background: var(--bg-surface);
+      color: var(--text-muted);
+      border: 1px solid var(--border-card);
+      transition: all 0.2s ease;
+    }
+
+    .service-tab-btn:hover {
+      color: var(--text-ink);
+      border-color: var(--text-ink);
+    }
+
+    .service-tab-btn.active {
+      background: var(--text-ink);
+      color: #FFFFFF;
+      border-color: var(--text-ink);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 22px;
+    }
+
+    .service-card {
+      background: var(--bg-surface);
+      border: 2px solid var(--border-card);
+      border-radius: var(--radius-xl);
+      padding: 30px 26px;
+      position: relative;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--text-ink);
+    }
+
+    .service-card-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .service-icon-box {
+      width: 54px;
+      height: 54px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.65rem;
+      flex-shrink: 0;
+    }
+
+    .icon-drinks {
+      background: var(--accent-coral-soft);
+      color: var(--accent-coral);
+    }
+
+    .icon-shoes {
+      background: #E8EDFF;
+      color: #3751FF;
+    }
+
+    .icon-juice {
+      background: var(--bg-mint-tint);
+      color: var(--accent-mint-dark);
+    }
+
+    .icon-salon {
+      background: #FDF0FF;
+      color: #9D2CE0;
+    }
+
+    .service-title {
+      font-size: 1.4rem;
+      margin-bottom: 6px;
+    }
+
+    .service-tagline {
+      font-weight: 700;
+      color: var(--accent-coral-deep);
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+
+    .service-body {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 22px;
+      flex-grow: 1;
+    }
+
+    .service-bullets {
+      list-style: none;
+      margin-bottom: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .service-bullets li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text-ink);
+    }
+
+    .bullet-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--accent-coral);
+      border-radius: 50%;
+    }
+
+    .service-action-btn {
+      width: 100%;
+      margin-top: auto;
+    }
+
+    /* =========================================================
+       SECTION: EVENT BOOKING CALLOUT
+       ========================================================= */
+    .events-banner-wrap {
+      background: linear-gradient(135deg, #FFF1F3 0%, #FFF9EB 100%);
+      border: 2px solid #F7D0D8;
+      border-radius: var(--radius-xl);
+      padding: clamp(32px, 6vw, 56px) clamp(20px, 5vw, 48px);
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+
+    .events-banner-wrap::after {
+      content: '🍸';
+      position: absolute;
+      bottom: -20px;
+      right: 20px;
+      font-size: 110px;
+      opacity: 0.12;
+      pointer-events: none;
+    }
+
+    .events-banner-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .events-content h2 {
+      font-size: clamp(1.9rem, 4.5vw, 2.9rem);
+      margin-bottom: 16px;
+      color: var(--text-ink);
+    }
+
+    .events-content p {
+      font-size: 1.1rem;
+      margin-bottom: 26px;
+      max-width: 580px;
+    }
+
+    .events-perks-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-bottom: 30px;
+    }
+
+    .event-perk-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 12px 16px;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(255, 56, 92, 0.15);
+    }
+
+    .perk-check {
+      width: 22px;
+      height: 22px;
+      background: var(--accent-coral);
+      color: #FFFFFF;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 800;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .perk-text strong {
+      display: block;
+      color: var(--text-ink);
+      font-size: 0.95rem;
+    }
+
+    .perk-text span {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Event Quick Quoter Box */
+    .event-quoter-card {
+      background: #FFFFFF;
+      border: 2px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 26px 22px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .quoter-title {
+      font-size: 1.25rem;
+      margin-bottom: 6px;
+    }
+
+    .quoter-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+
+    .quoter-field {
+      margin-bottom: 16px;
+    }
+
+    .quoter-label {
+      display: block;
+      font-weight: 700;
+      font-size: 0.84rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-ink);
+      margin-bottom: 8px;
+    }
+
+    .quoter-chip-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .quoter-chip {
+      padding: 8px 14px;
+      border-radius: var(--radius-md);
+      font-size: 0.86rem;
+      font-weight: 600;
+      background: var(--bg-cream);
+      border: 1px solid var(--border-card);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .quoter-chip:hover {
+      border-color: var(--accent-coral);
+    }
+
+    .quoter-chip.selected {
+      background: var(--accent-coral-soft);
+      border-color: var(--accent-coral);
+      color: var(--accent-coral-deep);
+      font-weight: 700;
+    }
+
+    /* =========================================================
+       SECTION: LOCATION & HOURS STRIP
+       ========================================================= */
+    .location-strip-card {
+      background: var(--bg-surface);
+      border: 2px solid var(--border-card);
+      border-radius: var(--radius-xl);
+      padding: clamp(28px, 5vw, 44px);
+      box-shadow: var(--shadow-md);
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .loc-info-block h3 {
+      font-size: 1.65rem;
+      margin-bottom: 8px;
+    }
+
+    .loc-address {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text-ink);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .loc-directions-hint {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 22px;
+      line-height: 1.5;
+    }
+
+    .hours-badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+
+    .hours-pill {
+      background: var(--bg-warm-tint);
+      border: 1px solid rgba(255, 56, 92, 0.2);
+      padding: 8px 16px;
+      border-radius: var(--radius-pill);
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--accent-coral-deep);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .loc-buttons-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* Visual Map Graphic / Route Badge */
+    .loc-visual-banner {
+      background: linear-gradient(135deg, #FFF2DC 0%, #FFE5EB 100%);
+      border: 2px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .loc-visual-map-pin {
+      width: 58px;
+      height: 58px;
+      background: var(--accent-coral);
+      color: #FFFFFF;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin: 0 auto 16px;
+      box-shadow: 0 8px 20px rgba(255, 56, 92, 0.35);
+    }
+
+    .loc-visual-banner h4 {
+      font-size: 1.2rem;
+      margin-bottom: 6px;
+    }
+
+    .loc-visual-banner p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    /* =========================================================
+       FOOTER & UNIFIED SOCIAL STRIP
+       ========================================================= */
+    .site-footer {
+      background: #FFFFFF;
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 56px;
+      padding-bottom: 40px;
+    }
+
+    .footer-top-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+      margin-bottom: 44px;
+    }
+
+    .footer-brand-summary p {
+      margin-top: 12px;
+      font-size: 0.95rem;
+      max-width: 440px;
+    }
+
+    .footer-channel-group h4 {
+      font-size: 1.05rem;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-ink);
+    }
+
+    .social-bridge-cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .channel-link-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--bg-cream);
+      border: 1px solid var(--border-card);
+      padding: 12px 18px;
+      border-radius: var(--radius-md);
+      transition: all 0.2s ease;
+    }
+
+    .channel-link-card:hover {
+      background: var(--bg-surface);
+      border-color: var(--accent-coral);
+      transform: translateX(4px);
+    }
+
+    .channel-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .channel-icon {
+      font-size: 1.2rem;
+    }
+
+    .channel-title {
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--text-ink);
+    }
+
+    .channel-stats {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .footer-bottom-row {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 28px;
+      border-top: 1px solid var(--border-subtle);
+      font-size: 0.86rem;
+      color: var(--text-subtle);
+      text-align: center;
+    }
+
+    /* Floating WhatsApp Button */
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #25D366;
+      color: #FFFFFF;
+      padding: 12px 20px;
+      border-radius: var(--radius-pill);
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.95rem;
+      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .floating-whatsapp:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 14px 30px rgba(37, 211, 102, 0.5);
+    }
+
+    /* Toast Notification for Copy Address */
+    .toast-popup {
+      position: fixed;
+      bottom: 90px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: var(--text-ink);
+      color: #FFFFFF;
+      padding: 10px 22px;
+      border-radius: var(--radius-pill);
+      font-size: 0.9rem;
+      font-weight: 600;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.25s ease;
+      z-index: 110;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .toast-popup.visible {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* =========================================================
+       RESPONSIVE BREAKPOINTS (Desktop & Tablet scaling)
+       ========================================================= */
+    @media (min-width: 640px) {
+      .drinks-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .events-perks-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-top-grid {
+        grid-template-columns: 1.2fr 1fr;
+      }
+
+      .footer-bottom-row {
+        flex-direction: row;
+        text-align: left;
+      }
+    }
+
+    @media (min-width: 860px) {
+      .header-location-tag, .header-nav {
+        display: flex;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 52px;
+      }
+
+      .location-strip-card {
+        grid-template-columns: 1.3fr 0.7fr;
+      }
+
+      .events-banner-grid {
+        grid-template-columns: 1.2fr 0.8fr;
+      }
+    }
+
+    @media (min-width: 1040px) {
+      .drinks-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  </style>
+</head>
+<body id="top">
+
+  <!-- ==========================================
+       SITE HEADER
+       ========================================== -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="#top" class="brand-logo" id="logo-link">
+        <div class="brand-mark" id="brand-avatar">D</div>
+        <span>Diem Hub <span style="font-size: 0.8em; font-weight: 600; color: var(--accent-coral);">Ltd</span></span>
+      </a>
+
+      <div class="header-location-tag" id="header-loc-badge">
+        <span class="pulse-dot"></span>
+        <span>Akuru, Elebu • Ibadan</span>
+      </div>
+
+      <nav class="header-nav" id="desktop-nav">
+        <a href="#drinks" id="nav-drinks">Signature Drinks</a>
+        <a href="#services" id="nav-services">Our 4 Pillars</a>
+        <a href="#events" id="nav-events">Events Booking</a>
+        <a href="#location" id="nav-location">Location & Hours</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://wa.me/2348000000000?text=Hello%20Diem%20Hub%20Limited!%20I%20would%20like%20to%20place%20an%20order" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="btn btn-primary btn-sm" 
+           id="header-cta-btn">
+          <span>Order on WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       HERO SECTION
+       ========================================= -->
+  <section class="hero-section" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- Hero Pitch Copy -->
+        <div class="hero-copy" id="hero-copy-block">
+          <div class="hero-announcement" id="hero-pill-badge">
+            <span class="badge-pill badge-coral">Ibadan's Flagship Hub</span>
+            <span>Premiere Estate • Elebu</span>
+          </div>
+
+          <h1 class="hero-title" id="main-heading">
+            Drinks, Events &amp; <br/>
+            Lifestyle. <span class="highlight">All in One Hub.</span>
+          </h1>
+
+          <p class="hero-subtitle" id="hero-subtext">
+            From cold-infused <strong>Fruity Zobo</strong> and creamy <strong>Tigernut Milky</strong>, to full-service event mixology, trendy footwear, raw juice cleanses, and salon care — welcome to Diem Hub Limited.
+          </p>
+
+          <div class="hero-ctas" id="hero-cta-buttons">
+            <a href="https://wa.me/2348000000000?text=Hi%20Diem%20Hub,%20I%20want%20to%20order%20signature%20drinks%20today!" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="btn btn-primary" 
+               id="hero-order-cta">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              <span>Order via WhatsApp</span>
+            </a>
+
+            <a href="#events" class="btn btn-outline" id="hero-book-cta">
+              <span>Book Your Event Bar</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- Multi-offering Chips -->
+          <div class="hub-offerings-strip" id="offerings-chips">
+            <div class="offering-chip" id="chip-drinks"><span class="emoji">🍹</span> Cocktails &amp; Milkshakes</div>
+            <div class="offering-chip" id="chip-events"><span class="emoji">🎉</span> Event Mixology</div>
+            <div class="offering-chip" id="chip-juice"><span class="emoji">🥑</span> Smoothie &amp; Juices</div>
+            <div class="offering-chip" id="chip-shoes"><span class="emoji">👟</span> Footwear Lounge</div>
+            <div class="offering-chip" id="chip-salon"><span class="emoji">✂️</span> Hair Salon</div>
+          </div>
+        </div>
+
+        <!-- Hero Pitch Card Preview -->
+        <div class="hero-visual-card" id="hero-showcase-card">
+          <div class="hero-visual-header">
+            <div class="hero-badge-stack">
+              <span class="hero-status-pill">
+                <span class="pulse-dot"></span>
+                <span>Open Today: 10:00 – 22:00</span>
+              </span>
+              <span class="hero-location-text">Premiere Estate, Akuru, Elebu</span>
+            </div>
+            <span class="badge-pill badge-mango">Fresh Daily</span>
+          </div>
+
+          <!-- 2 Top Signature Drinks in Mini Frame -->
+          <div class="hero-drinks-mini-row" id="hero-mini-drinks">
+            <div class="hero-mini-drink" id="mini-zobo">
+              <div class="mini-drink-art-container">
+                <div class="glass-zobo" style="transform: scale(0.72); transform-origin: center center;">
+                  <div class="straw-striped"></div>
+                  <div class="orange-slice"></div>
+                  <div class="mint-leaf"></div>
+                  <div class="drink-liquid-zobo">
+                    <div class="ice-cube ice-1"></div>
+                    <div class="ice-cube ice-2"></div>
+                  </div>
+                </div>
+              </div>
+              <h4>Fruity Zobo</h4>
+              <p>Cold-Steeped</p>
+            </div>
+
+            <div class="hero-mini-drink" id="mini-tigernut">
+              <div class="mini-drink-art-container">
+                <div class="glass-tigernut" style="transform: scale(0.72); transform-origin: center center;">
+                  <div class="cinnamon-stick"></div>
+                  <div class="drink-liquid-tigernut">
+                    <div class="foam-layer"></div>
+                    <div class="tigernut-dates-fleck" style="top: 30px; left: 16px;"></div>
+                    <div class="tigernut-dates-fleck" style="top: 50px; right: 20px;"></div>
+                    <div class="tigernut-dates-fleck" style="top: 70px; left: 34px;"></div>
+                  </div>
+                </div>
+              </div>
+              <h4>Tigernut Milky</h4>
+              <p>Rich &amp; Creamy</p>
+            </div>
+          </div>
+
+          <!-- Social Proof & Multi-platform bridge -->
+          <div class="hero-social-proof" id="hero-social-strip">
+            <div class="social-proof-icon">★</div>
+            <div class="social-proof-text">
+              Unifying our <strong>720+ Facebook fans</strong>, Selar footwear store &amp; walk-in guests under one flagship website.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION: SIGNATURE DRINKS
+       ========================================== -->
+  <section class="section-wrap" id="drinks">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge-pill badge-coral">Crafted in Elebu</span>
+        <h2>Signature Sips &amp; Chillers</h2>
+        <p>Hand-crafted cocktails, mocktails, and chilled local favorites made fresh daily with real fruit, cold herbs, and zero shortcuts.</p>
+      </div>
+
+      <div class="drinks-grid" id="drinks-list">
+        
+        <!-- Drink 1: Fruity Zobo -->
+        <article class="drink-card drink-card-popular" id="card-fruity-zobo">
+          <div class="card-top-tag">
+            <span class="badge-pill badge-coral">Bestseller</span>
+          </div>
+
+          <div class="drink-visual-box" id="visual-zobo">
+            <div class="glass-zobo">
+              <div class="straw-striped"></div>
+              <div class="orange-slice"></div>
+              <div class="mint-leaf"></div>
+              <div class="drink-liquid-zobo">
+                <div class="ice-cube ice-1"></div>
+                <div class="ice-cube ice-2"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drink-card-content">
+            <div class="drink-title">
+              <h3>Fruity Zobo</h3>
+            </div>
+            <p class="drink-desc">
+              Velvety hibiscus flowers slow-steeped with ginger, cloves, fresh pineapple cubes, sliced citrus, and a crisp mint garnish. Deep, ruby, refreshing.
+            </p>
+            <div class="drink-footer">
+              <span class="drink-category">Local Signature</span>
+              <a href="https://wa.me/2348000000000?text=Hi%20Diem%20Hub!%20I'd%20love%20to%20order%20your%20Signature%20Fruity%20Zobo" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="drink-order-link" 
+                 id="order-zobo-btn">
+                <span>Order Now</span> &rarr;
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Drink 2: Tigernut Milky -->
+        <article class="drink-card drink-card-popular" id="card-tigernut-milky">
+          <div class="card-top-tag">
+            <span class="badge-pill badge-mango">House Special</span>
+          </div>
+
+          <div class="drink-visual-box" id="visual-tigernut">
+            <div class="glass-tigernut">
+              <div class="cinnamon-stick"></div>
+              <div class="drink-liquid-tigernut">
+                <div class="foam-layer"></div>
+                <div class="tigernut-dates-fleck" style="top: 32px; left: 16px;"></div>
+                <div class="tigernut-dates-fleck" style="top: 48px; right: 24px;"></div>
+                <div class="tigernut-dates-fleck" style="top: 68px; left: 28px;"></div>
+                <div class="tigernut-dates-fleck" style="top: 84px; right: 18px;"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drink-card-content">
+            <div class="drink-title">
+              <h3>Tigernut Milky</h3>
+            </div>
+            <p class="drink-desc">
+              Sweet chilled extract of fresh tigernuts (ofio), organic dates, and coconut milk with a hint of cinnamon spice. Rich, naturally sweet, and creamy.
+            </p>
+            <div class="drink-footer">
+              <span class="drink-category">Creamy Chiller</span>
+              <a href="https://wa.me/2348000000000?text=Hi%20Diem%20Hub!%20I'd%20love%20to%20order%20your%20Tigernut%20Milky" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="drink-order-link" 
+                 id="order-tigernut-btn">
+                <span>Order Now</span> &rarr;
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Drink 3: Sunset Chapman -->
+        <article class="drink-card" id="card-sunset-chapman">
+          <div class="card-top-tag">
+            <span class="badge-pill badge-mint">Classic</span>
+          </div>
+
+          <div class="drink-visual-box" id="visual-chapman">
+            <div class="glass-chapman">
+              <div class="straw-striped" style="transform: rotate(8deg); left: 32px;"></div>
+              <div class="orange-slice" style="left: -4px;"></div>
+              <div class="drink-liquid-chapman">
+                <div class="cucumber-ribbon"></div>
+                <div class="ice-cube ice-1"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drink-card-content">
+            <div class="drink-title">
+              <h3>Sunset Chapman</h3>
+            </div>
+            <p class="drink-desc">
+              The ultimate Nigerian celebration cocktail. Angostura aromatic bitters, pomegranate grenadine, bubbly citrus fizz, fresh cucumber ribbon, and lime.
+            </p>
+            <div class="drink-footer">
+              <span class="drink-category">Mocktail / Cocktail</span>
+              <a href="https://wa.me/2348000000000?text=Hi%20Diem%20Hub!%20I'd%20love%20to%20order%20the%20Sunset%20Chapman" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="drink-order-link" 
+                 id="order-chapman-btn">
+                <span>Order Now</span> &rarr;
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Drink 4: Mango Velvet Milkshake -->
+        <article class="drink-card" id="card-mango-shake">
+          <div class="card-top-tag">
+            <span class="badge-pill badge-mango">Velvety</span>
+          </div>
+
+          <div class="drink-visual-box" id="visual-shake">
+            <div class="glass-shake">
+              <div class="straw-striped" style="transform: rotate(-10deg); left: 24px; background: repeating-linear-gradient(45deg, #FFF, #FFF 6px, #FFAE03 6px, #FFAE03 12px);"></div>
+              <div class="whipped-cream"></div>
+              <div class="drink-liquid-shake"></div>
+            </div>
+          </div>
+
+          <div class="drink-card-content">
+            <div class="drink-title">
+              <h3>Mango Velvet Shake</h3>
+            </div>
+            <p class="drink-desc">
+              Thick, luscious blend of ripe Oyo mangoes, sweet vanilla ice cream, and dairy cream topped with light whipped froth. Pure decadent comfort.
+            </p>
+            <div class="drink-footer">
+              <span class="drink-category">Thick Milkshake</span>
+              <a href="https://wa.me/2348000000000?text=Hi%20Diem%20Hub!%20I'd%20love%20to%20order%20the%20Mango%20Velvet%20Milkshake" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="drink-order-link" 
+                 id="order-shake-btn">
+                <span>Order Now</span> &rarr;
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION: SERVICES (4 PILLARS)
+       ========================================== -->
+  <section class="section-wrap" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge-pill badge-coral">One Brand • Four Experiences</span>
+        <h2>The Diem Hub Lifestyle</h2>
+        <p>We believe in variety that flows together. Discover the four core services running side-by-side at our Elebu headquarters.</p>
+      </div>
+
+      <!-- Quick Filter Navigation Tabs -->
+      <div class="services-nav-tabs" id="service-filter-tabs">
+        <button class="service-tab-btn active" data-filter="all" id="tab-all">All 4 Offerings</button>
+        <button class="service-tab-btn" data-filter="drinks" id="tab-drinks">Cocktails &amp; Events</button>
+        <button class="service-tab-btn" data-filter="shoes" id="tab-shoes">Footwear Store</button>
+        <button class="service-tab-btn" data-filter="juice" id="tab-juice">Smoothie &amp; Juice</button>
+        <button class="service-tab-btn" data-filter="salon" id="tab-salon">Hair Salon</button>
+      </div>
+
+      <div class="services-grid" id="services-cards-grid">
+        
+        <!-- Pillar 1: Cocktails & Events -->
+        <div class="service-card" data-category="drinks" id="service-bar-events">
+          <div class="service-card-header">
+            <div>
+              <h3 class="service-title">Drinks &amp; Event Mixology</h3>
+              <div class="service-tagline">Walk-in bar service &amp; mobile event setups</div>
+            </div>
+            <div class="service-icon-box icon-drinks">🍹</div>
+          </div>
+
+          <p class="service-body">
+            Signature cocktails, alcohol-free mocktails, chilled kegged Fruity Zobo, and complete pop-up bar setups for weddings, birthdays, and anniversaries in Ibadan.
+          </p>
+
+          <ul class="service-bullets">
+            <li><span class="bullet-dot"></span> Mobile event cocktail &amp; mocktail bar</li>
+            <li><span class="bullet-dot"></span> Certified flair bartenders &amp; custom menus</li>
+            <li><span class="bullet-dot"></span> Kegged &amp; bottled bulk delivery</li>
+          </ul>
+
+          <a href="#events" class="btn btn-outline service-action-btn" id="btn-service-events">
+            <span>Explore Event Packages</span> &rarr;
+          </a>
+        </div>
+
+        <!-- Pillar 2: Footwear Store -->
+        <div class="service-card" data-category="shoes" id="service-footwear">
+          <div class="service-card-header">
+            <div>
+              <h3 class="service-title">Diem Footwear Lounge</h3>
+              <div class="service-tagline">Curated casual slides, sneakers &amp; sandals</div>
+            </div>
+            <div class="service-icon-box icon-shoes">👟</div>
+          </div>
+
+          <p class="service-body">
+            Upgrade your everyday stride. Browse our in-store collection and online Selar catalog featuring premium slides, statement sneakers, and summer sandals.
+          </p>
+
+          <ul class="service-bullets">
+            <li><span class="bullet-dot"></span> Try on pairs directly in our Akuru store</li>
+            <li><span class="bullet-dot"></span> Direct Selar checkout &amp; fast doorstep delivery</li>
+            <li><span class="bullet-dot"></span> Handpicked men's &amp; women's styles</li>
+          </ul>
+
+          <a href="https://wa.me/2348000000000?text=Hi%20Diem%20Hub!%20I%20would%20like%20to%20see%20your%20available%20footwear%20collection" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="btn btn-outline service-action-btn" 
+             id="btn-service-shoes">
+            <span>Shop Footwear on Selar / WhatsApp</span> &rarr;
+          </a>
+        </div>
+
+        <!-- Pillar 3: Smoothie & Juice Bar -->
+        <div class="service-card" data-category="juice" id="service-juice-bar">
+          <div class="service-card-header">
+            <div>
+              <h3 class="service-title">Smoothie &amp; Juice Bar</h3>
+              <div class="service-tagline">100% Raw cold-pressed fruit &amp; detox blends</div>
+            </div>
+            <div class="service-icon-box icon-juice">🥑</div>
+          </div>
+
+          <p class="service-body">
+            Clean natural energy pressed fresh on order. No added sugar, no artificial syrups — just pure tropical watermelon, pineapple, ginger shots, and green boosts.
+          </p>
+
+          <ul class="service-bullets">
+            <li><span class="bullet-dot"></span> Cold-pressed detox &amp; wellness juices</li>
+            <li><span class="bullet-dot"></span> Greek yogurt &amp; oatmeal fruit smoothies</li>
+            <li><span class="bullet-dot"></span> Daily booster shots (Ginger, Turmeric, Lemon)</li>
+          </ul>
+
+          <a href="https://wa.me/2348000000000?text=Hi%20Diem%20Hub!%20I%20want%20to%20order%20fresh%20cold-pressed%20juices%20or%20smoothies" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="btn btn-outline service-action-btn" 
+             id="btn-service-juice">
+            <span>Order Fresh Juices</span> &rarr;
+          </a>
+        </div>
+
+        <!-- Pillar 4: Hair Salon -->
+        <div class="service-card" data-category="salon" id="service-salon">
+          <div class="service-card-header">
+            <div>
+              <h3 class="service-title">Diem Hair &amp; Beauty Salon</h3>
+              <div class="service-tagline">Contemporary styling, braids &amp; haircare</div>
+            </div>
+            <div class="service-icon-box icon-salon">✂️</div>
+          </div>
+
+          <p class="service-body">
+            Relax while getting your hair done in a modern, air-conditioned studio right inside the hub. Enjoy a complimentary chilled drink while you style.
+          </p>
+
+          <ul class="service-bullets">
+            <li><span class="bullet-dot"></span> Knotless braids, locs &amp; protective styles</li>
+            <li><span class="bullet-dot"></span> Natural hair washing, steaming &amp; treatment</li>
+            <li><span class="bullet-dot"></span> Walk-ins and pre-booked appointments</li>
+          </ul>
+
+          <a href="https://wa.me/2348000000000?text=Hi%20Diem%20Hub!%20I%20would%20like%20to%20book%20a%20hair%20salon%20session" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="btn btn-outline service-action-btn" 
+             id="btn-service-salon">
+            <span>Book Salon Session</span> &rarr;
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION: EVENTS BOOKING CALLOUT
+       ========================================== -->
+  <section class="section-wrap" id="events" style="padding-top: 20px;">
+    <div class="container">
+      <div class="events-banner-wrap" id="events-banner">
+        <div class="events-banner-grid">
+          
+          <div class="events-content" id="events-content-block">
+            <span class="badge-pill badge-coral" style="margin-bottom: 16px;">Now Booking Across Oyo State</span>
+            <h2 id="events-heading">Available for Your Events Booking</h2>
+            <p id="events-subtext">
+              Transform your weddings, milestone birthdays, corporate launch parties, and private dinners with Diem Hub's mobile bar experience. We bring the bar, the flair bartenders, and the signature drinks directly to your venue.
+            </p>
+
+            <div class="events-perks-row" id="events-perks">
+              <div class="event-perk-item">
+                <div class="perk-check">✓</div>
+                <div class="perk-text">
+                  <strong>Custom Drink Menus</strong>
+                  <span>Signature Fruity Zobo &amp; cocktails branded for your party</span>
+                </div>
+              </div>
+
+              <div class="event-perk-item">
+                <div class="perk-check">✓</div>
+                <div class="perk-text">
+                  <strong>Complete Mobile Setup</strong>
+                  <span>Glassware, ice coolers, garnish stations &amp; flair bar</span>
+                </div>
+              </div>
+
+              <div class="event-perk-item">
+                <div class="perk-check">✓</div>
+                <div class="perk-text">
+                  <strong>Professional Mixologists</strong>
+                  <span>Punctual, friendly, and trained event bartenders</span>
+                </div>
+              </div>
+
+              <div class="event-perk-item">
+                <div class="perk-check">✓</div>
+                <div class="perk-text">
+                  <strong>Flexible Guest Scales</strong>
+                  <span>From intimate 30-guest dinners to 1,000+ guest weddings</span>
+                </div>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+              <a href="https://wa.me/2348000000000?text=Hello%20Diem%20Hub!%20I%20am%20planning%20an%20event%20and%20would%20like%20to%20inquire%20about%20your%20Event%20Bar%20Booking" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="btn btn-primary" 
+                 id="btn-event-whatsapp">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                <span>Inquire for Your Date</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Interactive Event Message Composer -->
+          <div class="event-quoter-card" id="event-quoter">
+            <h3 class="quoter-title">Quick Event Quoter</h3>
+            <p class="quoter-desc">Select your details to generate an instant WhatsApp request.</p>
+
+            <div class="quoter-field">
+              <label class="quoter-label">1. Event Type</label>
+              <div class="quoter-chip-group" id="event-type-chips">
+                <button type="button" class="quoter-chip selected" data-value="Wedding Reception">Wedding</button>
+                <button type="button" class="quoter-chip" data-value="Birthday Soirée">Birthday</button>
+                <button type="button" class="quoter-chip" data-value="Corporate Function">Corporate</button>
+                <button type="button" class="quoter-chip" data-value="Private Dinner">Private Soirée</button>
+              </div>
+            </div>
+
+            <div class="quoter-field">
+              <label class="quoter-label">2. Estimated Guests</label>
+              <div class="quoter-chip-group" id="guest-count-chips">
+                <button type="button" class="quoter-chip" data-value="Under 50 guests">20 – 50</button>
+                <button type="button" class="quoter-chip selected" data-value="50 to 150 guests">50 – 150</button>
+                <button type="button" class="quoter-chip" data-value="150 to 300 guests">150 – 300</button>
+                <button type="button" class="quoter-chip" data-value="300+ guests">300+</button>
+              </div>
+            </div>
+
+            <div class="quoter-field">
+              <label class="quoter-label">3. Drink Focus</label>
+              <div class="quoter-chip-group" id="drink-focus-chips">
+                <button type="button" class="quoter-chip selected" data-value="Signature Local (Fruity Zobo & Tigernut Milky)">Zobo &amp; Milky Focus</button>
+                <button type="button" class="quoter-chip" data-value="Cocktails & Mocktails Full Bar">Full Cocktail Bar</button>
+                <button type="button" class="quoter-chip" data-value="Juices & Milkshakes">Juices &amp; Shakes</button>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-primary" style="width: 100%;" id="send-event-quote-btn">
+              <span>Send Inquiries to Diem Hub</span> &rarr;
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION: LOCATION & HOURS STRIP
+       ========================================== -->
+  <section class="section-wrap" id="location">
+    <div class="container">
+      <div class="location-strip-card" id="location-card">
+        
+        <div class="loc-info-block" id="loc-info">
+          <span class="badge-pill badge-mint" style="margin-bottom: 14px;">Visit Our Physical Hub</span>
+          <h3>Find Us in Elebu, Ibadan</h3>
+          
+          <div class="loc-address" id="loc-address-text">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent-coral)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>Premiere Estate, Akuru, Elebu, Ibadan, Oyo State</span>
+          </div>
+
+          <p class="loc-directions-hint" id="loc-hint">
+            Conveniently situated along the Akuru-Elebu corridor. Easy parking, cozy outdoor &amp; indoor seating, and chilled air conditioning while you wait for your drinks or salon appointment.
+          </p>
+
+          <div class="hours-badge-row" id="hours-row">
+            <div class="hours-pill" id="hours-badge">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>Daily Operating Hours: <strong>10:00 – 22:00 (10 AM - 10 PM)</strong></span>
+            </div>
+
+            <span class="hero-status-pill" id="live-status-pill">
+              <span class="pulse-dot"></span>
+              <span id="open-status-text">Open Today</span>
+            </span>
+          </div>
+
+          <div class="loc-buttons-row" id="loc-actions">
+            <button type="button" class="btn btn-outline btn-sm" id="copy-address-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copy Address</span>
+            </button>
+
+            <a href="https://maps.google.com/?q=Elebu+Ibadan+Oyo+State" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="btn btn-outline btn-sm" 
+               id="google-maps-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+              <span>Open in Maps</span>
+            </a>
+
+            <a href="tel:+2348000000000" class="btn btn-outline btn-sm" id="call-direct-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>Call Us</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Visual Map / Direction Graphic -->
+        <div class="loc-visual-banner" id="loc-banner">
+          <div class="loc-visual-map-pin">📍</div>
+          <h4>Elebu's Favorite Spot</h4>
+          <p>Whether you're picking up bottles of Fruity Zobo on your commute or booking event mixologists, our team is ready.</p>
+          <a href="https://wa.me/2348000000000?text=Hi%20Diem%20Hub,%20can%20you%20send%20me%20directions%20to%20your%20hub%20in%20Akuru%20Elebu?" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="btn btn-primary btn-sm" 
+             id="ask-directions-btn">
+            <span>Get Directions via WhatsApp</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SITE FOOTER & COMMUNITY BRIDGES
+       ========================================== -->
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      
+      <div class="footer-top-grid">
+        <!-- Brand Summary -->
+        <div class="footer-brand-summary" id="footer-brand">
+          <div class="brand-logo">
+            <div class="brand-mark">D</div>
+            <span>Diem Hub Limited</span>
+          </div>
+          <p>
+            A multifaceted drink, event, and lifestyle venture founded in Ibadan, Nigeria. Crafting cold sips, dressing feet, juicing fresh greens, and styling looks all under one cohesive brand.
+          </p>
+          <div style="margin-top: 18px; font-weight: 700; font-size: 0.92rem; color: var(--accent-coral);">
+            📍 Premiere Estate, Akuru, Elebu, Ibadan (10:00 – 22:00 Daily)
+          </div>
+        </div>
+
+        <!-- Social Bridges / Existing Online Channels -->
+        <div class="footer-channel-group" id="footer-social-bridges">
+          <h4>Connect Across Our Channels</h4>
+          <div class="social-bridge-cards">
+            
+            <!-- Facebook (727 likes) -->
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="channel-link-card" id="fb-link-card">
+              <div class="channel-left">
+                <span class="channel-icon" style="color: #1877F2;">🌐</span>
+                <div>
+                  <div class="channel-title">Facebook Community</div>
+                  <div class="channel-stats">727+ followers &amp; community updates</div>
+                </div>
+              </div>
+              <span style="font-weight: 700; color: var(--accent-coral);">&rarr;</span>
+            </a>
+
+            <!-- Selar Store -->
+            <a href="https://selar.co" target="_blank" rel="noopener noreferrer" class="channel-link-card" id="selar-link-card">
+              <div class="channel-left">
+                <span class="channel-icon" style="color: #E27D60;">🛍️</span>
+                <div>
+                  <div class="channel-title">Selar Online Store</div>
+                  <div class="channel-stats">Diem Footwear catalog &amp; orders</div>
+                </div>
+              </div>
+              <span style="font-weight: 700; color: var(--accent-coral);">&rarr;</span>
+            </a>
+
+            <!-- Linktree -->
+            <a href="https://linktr.ee" target="_blank" rel="noopener noreferrer" class="channel-link-card" id="linktree-link-card">
+              <div class="channel-left">
+                <span class="channel-icon" style="color: #43E660;">🔗</span>
+                <div>
+                  <div class="channel-title">Linktree Directory</div>
+                  <div class="channel-stats">Legacy instant links &amp; contacts</div>
+                </div>
+              </div>
+              <span style="font-weight: 700; color: var(--accent-coral);">&rarr;</span>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-row">
+        <div>
+          &copy; <span id="copyright-year">2026</span> Diem Hub Limited. All rights reserved.
+        </div>
+        <div>
+          Pitch Concept Mockup crafted for Owner presentation &bull; Elebu, Ibadan, Nigeria
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating Sticky WhatsApp Button -->
+  <a href="https://wa.me/2348000000000?text=Hello%20Diem%20Hub%20Limited!%20I'm%20reaching%20out%20from%20your%20website" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="floating-whatsapp" 
+     id="floating-whatsapp-btn"
+     aria-label="Chat with Diem Hub on WhatsApp">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.299.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824z"/></svg>
+    <span>Chat on WhatsApp</span>
+  </a>
+
+  <!-- Toast Notification -->
+  <div class="toast-popup" id="copy-toast">Address copied to clipboard!</div>
+
+  <!-- ==========================================
+       INLINE INTERACTION SCRIPT (ZERO BUILD TOOLS)
+       ========================================== -->
+  <script>
+    // 1. Dynamic Year
+    const yearEl = document.getElementById('copyright-year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    // 2. Services Filter Tabs
+    const filterTabs = document.querySelectorAll('.service-tab-btn');
+    const serviceCards = document.querySelectorAll('.service-card');
+
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        filterTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        const filter = tab.getAttribute('data-filter');
+        serviceCards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // 3. Event Quick Quoter Interactive Selector & WhatsApp Generator
+    const setupChipGroup = (containerId) => {
+      const container = document.getElementById(containerId);
+      if (!container) return;
+      const chips = container.querySelectorAll('.quoter-chip');
+      chips.forEach(chip => {
+        chip.addEventListener('click', () => {
+          chips.forEach(c => c.classList.remove('selected'));
+          chip.classList.add('selected');
+        });
+      });
+    };
+
+    setupChipGroup('event-type-chips');
+    setupChipGroup('guest-count-chips');
+    setupChipGroup('drink-focus-chips');
+
+    const getSelectedValue = (containerId) => {
+      const container = document.getElementById(containerId);
+      if (!container) return '';
+      const selected = container.querySelector('.quoter-chip.selected');
+      return selected ? selected.getAttribute('data-value') : '';
+    };
+
+    const quoteBtn = document.getElementById('send-event-quote-btn');
+    if (quoteBtn) {
+      quoteBtn.addEventListener('click', () => {
+        const eventType = getSelectedValue('event-type-chips');
+        const guestCount = getSelectedValue('guest-count-chips');
+        const drinkFocus = getSelectedValue('drink-focus-chips');
+
+        const message = `Hello Diem Hub Limited! I would like an event booking quote:%0A- Event Type: ${encodeURIComponent(eventType)}%0A- Expected Guests: ${encodeURIComponent(guestCount)}%0A- Preferred Menu: ${encodeURIComponent(drinkFocus)}%0A%0APlease let me know your availability and package options!`;
+        const whatsappUrl = `https://wa.me/2348000000000?text=${message}`;
+        window.open(whatsappUrl, '_blank');
+      });
+    }
+
+    // 4. Copy Address to Clipboard with Toast
+    const copyBtn = document.getElementById('copy-address-btn');
+    const toast = document.getElementById('copy-toast');
+    if (copyBtn && toast) {
+      copyBtn.addEventListener('click', () => {
+        const addressText = "Premiere Estate, Akuru, Elebu, Ibadan, Oyo State, Nigeria";
+        navigator.clipboard.writeText(addressText).then(() => {
+          toast.classList.add('visible');
+          setTimeout(() => {
+            toast.classList.remove('visible');
+          }, 2400);
+        }).catch(() => {
+          toast.textContent = "Address: Premiere Estate, Akuru, Elebu, Ibadan";
+          toast.classList.add('visible');
+          setTimeout(() => {
+            toast.classList.remove('visible');
+          }, 2400);
+        });
+      });
+    }
+
+    // 5. Check Operating Hours Status (10:00 - 22:00)
+    try {
+      const now = new Date();
+      // Nigeria is GMT+1
+      const utcHours = now.getUTCHours();
+      const nigeriaHours = (utcHours + 1) % 24;
+      const statusText = document.getElementById('open-status-text');
+      if (statusText) {
+        if (nigeriaHours >= 10 && nigeriaHours < 22) {
+          statusText.textContent = "Open Now (Closes 22:00)";
+        } else {
+          statusText.textContent = "Opens 10:00 AM";
+        }
+      }
+    } catch (e) {
+      // Graceful fallback
+    }
+  </script>
+</body>
+</html>
