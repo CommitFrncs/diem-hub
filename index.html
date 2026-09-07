@@ -507,10 +507,26 @@
 
     .mini-drink-art-container {
       height: 90px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      margin-bottom: 12px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 12px;
+    }
+
+    .mini-drink-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .hero-mini-drink:hover .mini-drink-photo {
+      transform: scale(1.08);
     }
 
     .hero-mini-drink h4 {
@@ -618,10 +634,10 @@
       right: 18px;
     }
 
-    /* CSS Drink Illustrations (No broken images) */
+    /* Drink Cards & Services Real Visual Presentation */
     .drink-visual-box {
       width: 100%;
-      height: 170px;
+      height: 200px;
       background: var(--bg-cream);
       border-radius: var(--radius-lg);
       margin-bottom: 22px;
@@ -633,202 +649,38 @@
       border: 1px solid var(--border-subtle);
     }
 
-    /* --- ART 1: FRUITY ZOBO GLASS --- */
-    .glass-zobo {
-      width: 72px;
-      height: 120px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.15) 100%);
-      border: 3px solid #E2D7CE;
-      border-top: none;
-      border-radius: 4px 4px 22px 22px;
-      position: relative;
-      box-shadow: inset 0 -12px 18px rgba(0,0,0,0.12), 0 8px 16px rgba(163, 18, 48, 0.15);
+    .drink-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .drink-card:hover .drink-photo {
+      transform: scale(1.06);
+    }
+
+    .service-visual-box {
+      width: 100%;
+      height: 160px;
+      border-radius: var(--radius-lg);
       overflow: hidden;
+      margin-bottom: 20px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-cream);
     }
 
-    .drink-liquid-zobo {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 84%;
-      background: linear-gradient(180deg, #FF1352 0%, #A40028 100%);
-      border-radius: 0 0 18px 18px;
+    .service-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .ice-cube {
-      position: absolute;
-      width: 18px;
-      height: 18px;
-      background: rgba(255, 255, 255, 0.45);
-      border: 1.5px solid rgba(255, 255, 255, 0.7);
-      border-radius: 4px;
-      transform: rotate(20deg);
-    }
-
-    .ice-1 { top: 12px; left: 14px; }
-    .ice-2 { top: 32px; right: 12px; transform: rotate(-15deg); }
-
-    .mint-leaf {
-      position: absolute;
-      top: -14px;
-      right: 6px;
-      width: 22px;
-      height: 14px;
-      background: #10B981;
-      border-radius: 14px 0 14px 0;
-      transform: rotate(45deg);
-      border: 1px solid #047857;
-      z-index: 5;
-    }
-
-    .orange-slice {
-      position: absolute;
-      top: -10px;
-      left: 2px;
-      width: 26px;
-      height: 26px;
-      background: #FFAE03;
-      border-radius: 50%;
-      border: 3px solid #FFF3B0;
-      clip-path: polygon(0 0, 100% 0, 100% 60%, 0 60%);
-      transform: rotate(-25deg);
-      z-index: 6;
-    }
-
-    .straw-striped {
-      position: absolute;
-      top: -30px;
-      left: 28px;
-      width: 8px;
-      height: 140px;
-      background: repeating-linear-gradient(45deg, #FFFFFF, #FFFFFF 6px, #FF385C 6px, #FF385C 12px);
-      transform: rotate(12deg);
-      border-radius: 4px;
-      z-index: 4;
-      box-shadow: 2px 0 6px rgba(0,0,0,0.15);
-    }
-
-    /* --- ART 2: TIGERNUT MILKY JAR --- */
-    .glass-tigernut {
-      width: 78px;
-      height: 114px;
-      background: rgba(255, 255, 255, 0.5);
-      border: 3.5px solid #DED4C7;
-      border-top: none;
-      border-radius: 12px 12px 20px 20px;
-      position: relative;
-      box-shadow: inset 0 -10px 14px rgba(0,0,0,0.06), 0 8px 16px rgba(214, 158, 46, 0.15);
-      overflow: hidden;
-    }
-
-    .drink-liquid-tigernut {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 88%;
-      background: linear-gradient(180deg, #FFFDF8 0%, #F5E5C9 40%, #E8D3AE 100%);
-      border-radius: 0 0 16px 16px;
-    }
-
-    .foam-layer {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 16px;
-      background: #FFFFFF;
-      border-bottom: 2px dashed #D6C29E;
-    }
-
-    .tigernut-dates-fleck {
-      position: absolute;
-      width: 4px;
-      height: 4px;
-      background: #7B341E;
-      border-radius: 50%;
-    }
-
-    .cinnamon-stick {
-      position: absolute;
-      top: -26px;
-      right: 20px;
-      width: 9px;
-      height: 120px;
-      background: linear-gradient(90deg, #6B3419, #8C4722, #552711);
-      transform: rotate(-14deg);
-      border-radius: 3px;
-      z-index: 4;
-    }
-
-    /* --- ART 3: SUNSET CHAPMAN TALL --- */
-    .glass-chapman {
-      width: 66px;
-      height: 126px;
-      border: 3px solid #E2D7CE;
-      border-top: none;
-      border-radius: 2px 2px 18px 18px;
-      position: relative;
-      box-shadow: inset 0 -10px 15px rgba(0,0,0,0.08), 0 8px 16px rgba(255, 56, 92, 0.15);
-      overflow: hidden;
-    }
-
-    .drink-liquid-chapman {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 90%;
-      background: linear-gradient(180deg, #FFAE03 0%, #FF4D2D 45%, #B30026 100%);
-      border-radius: 0 0 14px 14px;
-    }
-
-    .cucumber-ribbon {
-      position: absolute;
-      bottom: 16px;
-      left: 6px;
-      width: 50px;
-      height: 10px;
-      background: rgba(16, 185, 129, 0.7);
-      border: 1px solid #059669;
-      border-radius: 10px;
-      transform: rotate(35deg);
-    }
-
-    /* --- ART 4: TROPICAL SHAKE / BOOSTER --- */
-    .glass-shake {
-      width: 74px;
-      height: 122px;
-      border: 3px solid #E2D7CE;
-      border-top: none;
-      border-radius: 8px 8px 24px 24px;
-      position: relative;
-      box-shadow: inset 0 -10px 15px rgba(0,0,0,0.08), 0 8px 16px rgba(6, 214, 160, 0.15);
-      overflow: hidden;
-    }
-
-    .drink-liquid-shake {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 92%;
-      background: linear-gradient(180deg, #FFE873 0%, #FFB703 50%, #FB8500 100%);
-      border-radius: 0 0 20px 20px;
-    }
-
-    .whipped-cream {
-      position: absolute;
-      top: -14px;
-      left: 10px;
-      width: 52px;
-      height: 24px;
-      background: #FFFFFF;
-      border-radius: 50% 50% 10% 10%;
-      border: 2px solid #F0E8DD;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.06);
-      z-index: 5;
+    .service-card:hover .service-photo {
+      transform: scale(1.05);
     }
 
     .drink-card-content {
@@ -1493,7 +1345,7 @@
       </nav>
 
       <div class="header-actions">
-        <a href="https://wa.me/2348000000000?text=Hello%20Diem%20Hub%20Limited!%20I%20would%20like%20to%20place%20an%20order" 
+        <a href="https://wa.me/2349130424018?text=Hello%20Diem%20Hub%20Limited!%20I%20would%20like%20to%20place%20an%20order" 
            target="_blank" 
            rel="noopener noreferrer" 
            class="btn btn-primary btn-sm" 
@@ -1528,7 +1380,7 @@
           </p>
 
           <div class="hero-ctas" id="hero-cta-buttons">
-            <a href="https://wa.me/2348000000000?text=Hi%20Diem%20Hub,%20I%20want%20to%20order%20signature%20drinks%20today!" 
+            <a href="https://wa.me/2349130424018?text=Hi%20Diem%20Hub,%20I%20want%20to%20order%20signature%20drinks%20today!" 
                target="_blank" 
                rel="noopener noreferrer" 
                class="btn btn-primary" 
@@ -1570,15 +1422,10 @@
           <div class="hero-drinks-mini-row" id="hero-mini-drinks">
             <div class="hero-mini-drink" id="mini-zobo">
               <div class="mini-drink-art-container">
-                <div class="glass-zobo" style="transform: scale(0.72); transform-origin: center center;">
-                  <div class="straw-striped"></div>
-                  <div class="orange-slice"></div>
-                  <div class="mint-leaf"></div>
-                  <div class="drink-liquid-zobo">
-                    <div class="ice-cube ice-1"></div>
-                    <div class="ice-cube ice-2"></div>
-                  </div>
-                </div>
+                <img src="/assets/images/fruity_zobo_drink_1788817077579.jpg" 
+                     alt="Fruity Zobo" 
+                     class="mini-drink-photo" 
+                     referrerpolicy="no-referrer" />
               </div>
               <h4>Fruity Zobo</h4>
               <p>Cold-Steeped</p>
@@ -1586,15 +1433,10 @@
 
             <div class="hero-mini-drink" id="mini-tigernut">
               <div class="mini-drink-art-container">
-                <div class="glass-tigernut" style="transform: scale(0.72); transform-origin: center center;">
-                  <div class="cinnamon-stick"></div>
-                  <div class="drink-liquid-tigernut">
-                    <div class="foam-layer"></div>
-                    <div class="tigernut-dates-fleck" style="top: 30px; left: 16px;"></div>
-                    <div class="tigernut-dates-fleck" style="top: 50px; right: 20px;"></div>
-                    <div class="tigernut-dates-fleck" style="top: 70px; left: 34px;"></div>
-                  </div>
-                </div>
+                <img src="/assets/images/tigernut_milky_drink_1788817095050.jpg" 
+                     alt="Tigernut Milky" 
+                     class="mini-drink-photo" 
+                     referrerpolicy="no-referrer" />
               </div>
               <h4>Tigernut Milky</h4>
               <p>Rich &amp; Creamy</p>
@@ -1634,15 +1476,11 @@
           </div>
 
           <div class="drink-visual-box" id="visual-zobo">
-            <div class="glass-zobo">
-              <div class="straw-striped"></div>
-              <div class="orange-slice"></div>
-              <div class="mint-leaf"></div>
-              <div class="drink-liquid-zobo">
-                <div class="ice-cube ice-1"></div>
-                <div class="ice-cube ice-2"></div>
-              </div>
-            </div>
+            <img src="/assets/images/fruity_zobo_drink_1788817077579.jpg" 
+                 alt="Chilled Fruity Zobo with mint and citrus" 
+                 class="drink-photo" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer" />
           </div>
 
           <div class="drink-card-content">
@@ -1654,7 +1492,7 @@
             </p>
             <div class="drink-footer">
               <span class="drink-category">Local Signature</span>
-              <a href="https://wa.me/2348000000000?text=Hi%20Diem%20Hub!%20I'd%20love%20to%20order%20your%20Signature%20Fruity%20Zobo" 
+              <a href="https://wa.me/2349130424018?text=Hi%20Diem%20Hub!%20I'd%20love%20to%20order%20your%20Signature%20Fruity%20Zobo" 
                  target="_blank" 
                  rel="noopener noreferrer" 
                  class="drink-order-link" 
@@ -1672,16 +1510,11 @@
           </div>
 
           <div class="drink-visual-box" id="visual-tigernut">
-            <div class="glass-tigernut">
-              <div class="cinnamon-stick"></div>
-              <div class="drink-liquid-tigernut">
-                <div class="foam-layer"></div>
-                <div class="tigernut-dates-fleck" style="top: 32px; left: 16px;"></div>
-                <div class="tigernut-dates-fleck" style="top: 48px; right: 24px;"></div>
-                <div class="tigernut-dates-fleck" style="top: 68px; left: 28px;"></div>
-                <div class="tigernut-dates-fleck" style="top: 84px; right: 18px;"></div>
-              </div>
-            </div>
+            <img src="/assets/images/tigernut_milky_drink_1788817095050.jpg" 
+                 alt="Creamy Tigernut Milky drink" 
+                 class="drink-photo" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer" />
           </div>
 
           <div class="drink-card-content">
@@ -1693,7 +1526,7 @@
             </p>
             <div class="drink-footer">
               <span class="drink-category">Creamy Chiller</span>
-              <a href="https://wa.me/2348000000000?text=Hi%20Diem%20Hub!%20I'd%20love%20to%20order%20your%20Tigernut%20Milky" 
+              <a href="https://wa.me/2349130424018?text=Hi%20Diem%20Hub!%20I'd%20love%20to%20order%20your%20Tigernut%20Milky" 
                  target="_blank" 
                  rel="noopener noreferrer" 
                  class="drink-order-link" 
@@ -1711,14 +1544,11 @@
           </div>
 
           <div class="drink-visual-box" id="visual-chapman">
-            <div class="glass-chapman">
-              <div class="straw-striped" style="transform: rotate(8deg); left: 32px;"></div>
-              <div class="orange-slice" style="left: -4px;"></div>
-              <div class="drink-liquid-chapman">
-                <div class="cucumber-ribbon"></div>
-                <div class="ice-cube ice-1"></div>
-              </div>
-            </div>
+            <img src="/assets/images/sunset_chapman_cocktail_1788817107553.jpg" 
+                 alt="Sunset Chapman cocktail with cucumber ribbon and citrus" 
+                 class="drink-photo" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer" />
           </div>
 
           <div class="drink-card-content">
@@ -1730,7 +1560,7 @@
             </p>
             <div class="drink-footer">
               <span class="drink-category">Mocktail / Cocktail</span>
-              <a href="https://wa.me/2348000000000?text=Hi%20Diem%20Hub!%20I'd%20love%20to%20order%20the%20Sunset%20Chapman" 
+              <a href="https://wa.me/2349130424018?text=Hi%20Diem%20Hub!%20I'd%20love%20to%20order%20the%20Sunset%20Chapman" 
                  target="_blank" 
                  rel="noopener noreferrer" 
                  class="drink-order-link" 
@@ -1748,11 +1578,11 @@
           </div>
 
           <div class="drink-visual-box" id="visual-shake">
-            <div class="glass-shake">
-              <div class="straw-striped" style="transform: rotate(-10deg); left: 24px; background: repeating-linear-gradient(45deg, #FFF, #FFF 6px, #FFAE03 6px, #FFAE03 12px);"></div>
-              <div class="whipped-cream"></div>
-              <div class="drink-liquid-shake"></div>
-            </div>
+            <img src="/assets/images/mango_velvet_shake_1788817119509.jpg" 
+                 alt="Mango Velvet Milkshake topped with whipped cream" 
+                 class="drink-photo" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer" />
           </div>
 
           <div class="drink-card-content">
@@ -1764,7 +1594,7 @@
             </p>
             <div class="drink-footer">
               <span class="drink-category">Thick Milkshake</span>
-              <a href="https://wa.me/2348000000000?text=Hi%20Diem%20Hub!%20I'd%20love%20to%20order%20the%20Mango%20Velvet%20Milkshake" 
+              <a href="https://wa.me/2349130424018?text=Hi%20Diem%20Hub!%20I'd%20love%20to%20order%20the%20Mango%20Velvet%20Milkshake" 
                  target="_blank" 
                  rel="noopener noreferrer" 
                  class="drink-order-link" 
@@ -1803,6 +1633,14 @@
         
         <!-- Pillar 1: Cocktails & Events -->
         <div class="service-card" data-category="drinks" id="service-bar-events">
+          <div class="service-visual-box">
+            <img src="/assets/images/diem_event_bar_1788817197757.jpg" 
+                 alt="Diem Hub Event Bar and Cocktails" 
+                 class="service-photo" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer" />
+          </div>
+
           <div class="service-card-header">
             <div>
               <h3 class="service-title">Drinks &amp; Event Mixology</h3>
@@ -1828,6 +1666,14 @@
 
         <!-- Pillar 2: Footwear Store -->
         <div class="service-card" data-category="shoes" id="service-footwear">
+          <div class="service-visual-box">
+            <img src="/assets/images/diem_footwear_collection_1788817151328.jpg" 
+                 alt="Diem Footwear Lounge Collection" 
+                 class="service-photo" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer" />
+          </div>
+
           <div class="service-card-header">
             <div>
               <h3 class="service-title">Diem Footwear Lounge</h3>
@@ -1846,7 +1692,7 @@
             <li><span class="bullet-dot"></span> Handpicked men's &amp; women's styles</li>
           </ul>
 
-          <a href="https://wa.me/2348000000000?text=Hi%20Diem%20Hub!%20I%20would%20like%20to%20see%20your%20available%20footwear%20collection" 
+          <a href="https://wa.me/2349130424018?text=Hi%20Diem%20Hub!%20I%20would%20like%20to%20see%20your%20available%20footwear%20collection" 
              target="_blank" 
              rel="noopener noreferrer" 
              class="btn btn-outline service-action-btn" 
@@ -1857,6 +1703,14 @@
 
         <!-- Pillar 3: Smoothie & Juice Bar -->
         <div class="service-card" data-category="juice" id="service-juice-bar">
+          <div class="service-visual-box">
+            <img src="/assets/images/diem_fresh_juices_1788817167600.jpg" 
+                 alt="Smoothie and Raw Cold Pressed Juice Bar" 
+                 class="service-photo" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer" />
+          </div>
+
           <div class="service-card-header">
             <div>
               <h3 class="service-title">Smoothie &amp; Juice Bar</h3>
@@ -1875,7 +1729,7 @@
             <li><span class="bullet-dot"></span> Daily booster shots (Ginger, Turmeric, Lemon)</li>
           </ul>
 
-          <a href="https://wa.me/2348000000000?text=Hi%20Diem%20Hub!%20I%20want%20to%20order%20fresh%20cold-pressed%20juices%20or%20smoothies" 
+          <a href="https://wa.me/2349130424018?text=Hi%20Diem%20Hub!%20I%20want%20to%20order%20fresh%20cold-pressed%20juices%20or%20smoothies" 
              target="_blank" 
              rel="noopener noreferrer" 
              class="btn btn-outline service-action-btn" 
@@ -1886,6 +1740,14 @@
 
         <!-- Pillar 4: Hair Salon -->
         <div class="service-card" data-category="salon" id="service-salon">
+          <div class="service-visual-box">
+            <img src="/assets/images/diem_hair_salon_1788817182493.jpg" 
+                 alt="Diem Hair and Beauty Salon" 
+                 class="service-photo" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer" />
+          </div>
+
           <div class="service-card-header">
             <div>
               <h3 class="service-title">Diem Hair &amp; Beauty Salon</h3>
@@ -1904,7 +1766,7 @@
             <li><span class="bullet-dot"></span> Walk-ins and pre-booked appointments</li>
           </ul>
 
-          <a href="https://wa.me/2348000000000?text=Hi%20Diem%20Hub!%20I%20would%20like%20to%20book%20a%20hair%20salon%20session" 
+          <a href="https://wa.me/2349130424018?text=Hi%20Diem%20Hub!%20I%20would%20like%20to%20book%20a%20hair%20salon%20session" 
              target="_blank" 
              rel="noopener noreferrer" 
              class="btn btn-outline service-action-btn" 
@@ -1967,7 +1829,7 @@
             </div>
 
             <div style="display: flex; gap: 14px; flex-wrap: wrap;">
-              <a href="https://wa.me/2348000000000?text=Hello%20Diem%20Hub!%20I%20am%20planning%20an%20event%20and%20would%20like%20to%20inquire%20about%20your%20Event%20Bar%20Booking" 
+              <a href="https://wa.me/2349130424018?text=Hello%20Diem%20Hub!%20I%20am%20planning%20an%20event%20and%20would%20like%20to%20inquire%20about%20your%20Event%20Bar%20Booking" 
                  target="_blank" 
                  rel="noopener noreferrer" 
                  class="btn btn-primary" 
@@ -2069,7 +1931,7 @@
               <span>Open in Maps</span>
             </a>
 
-            <a href="tel:+2348000000000" class="btn btn-outline btn-sm" id="call-direct-btn">
+            <a href="tel:+2349130424018" class="btn btn-outline btn-sm" id="call-direct-btn">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
               <span>Call Us</span>
             </a>
@@ -2081,7 +1943,7 @@
           <div class="loc-visual-map-pin">📍</div>
           <h4>Elebu's Favorite Spot</h4>
           <p>Whether you're picking up bottles of Fruity Zobo on your commute or booking event mixologists, our team is ready.</p>
-          <a href="https://wa.me/2348000000000?text=Hi%20Diem%20Hub,%20can%20you%20send%20me%20directions%20to%20your%20hub%20in%20Akuru%20Elebu?" 
+          <a href="https://wa.me/2349130424018?text=Hi%20Diem%20Hub,%20can%20you%20send%20me%20directions%20to%20your%20hub%20in%20Akuru%20Elebu?" 
              target="_blank" 
              rel="noopener noreferrer" 
              class="btn btn-primary btn-sm" 
@@ -2174,7 +2036,7 @@
   </footer>
 
   <!-- Floating Sticky WhatsApp Button -->
-  <a href="https://wa.me/2348000000000?text=Hello%20Diem%20Hub%20Limited!%20I'm%20reaching%20out%20from%20your%20website" 
+  <a href="https://wa.me/2349130424018?text=Hello%20Diem%20Hub%20Limited!%20I'm%20reaching%20out%20from%20your%20website" 
      target="_blank" 
      rel="noopener noreferrer" 
      class="floating-whatsapp" 
@@ -2247,7 +2109,7 @@
         const drinkFocus = getSelectedValue('drink-focus-chips');
 
         const message = `Hello Diem Hub Limited! I would like an event booking quote:%0A- Event Type: ${encodeURIComponent(eventType)}%0A- Expected Guests: ${encodeURIComponent(guestCount)}%0A- Preferred Menu: ${encodeURIComponent(drinkFocus)}%0A%0APlease let me know your availability and package options!`;
-        const whatsappUrl = `https://wa.me/2348000000000?text=${message}`;
+        const whatsappUrl = `https://wa.me/2349130424018?text=${message}`;
         window.open(whatsappUrl, '_blank');
       });
     }
